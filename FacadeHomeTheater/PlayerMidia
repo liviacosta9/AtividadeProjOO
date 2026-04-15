@@ -1,0 +1,18 @@
+public class PlayerMidia{
+
+    public void ligar(){
+        System.out.println("Player de mídia ligado");
+    }
+
+    public void reproduzirFilme(){
+        System.out.println("Filme sendo reproduzido");
+    }
+
+    public void reproduzirMusica(){
+        System.out.println("Música sendo reproduzida");
+    }
+
+    public void desligar(){
+        System.out.println("Player de mídia desligado");
+    }
+}
