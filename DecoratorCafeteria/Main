@@ -1,0 +1,21 @@
+public class MainCafeteria{
+    public static void main(String[] args){
+
+        //um expresso simples
+        Bebida pedido1 = new CafeExpresso();
+        System.out.println("Pedido 1: " + pedido1.getDescricao());
+        System.out.printf("Custo total: R$ %.2f\n\n", pedido1.getCusto());
+
+       //cappuccino com chantilly e calda de chocolate
+        Bebida pedido2 = new Cappuccino();
+        pedido2 = new Chantilly(pedido2);
+        pedido2 = new CaldaChocolate(pedido2);
+        System.out.println("Pedido 2: " + pedido2.getDescricao());
+        System.out.printf("Custo total: R$ %.2f\n\n", pedido2.getCusto());
+
+      //chá com leite e canela
+        Bebida pedido3 = new Canela(new Leite(new Cha()));
+        System.out.println("Pedido 3: " + pedido3.getDescricao());
+        System.out.printf("Custo total: R$ %.2f\n\n", pedido3.getCusto());
+    }
+}

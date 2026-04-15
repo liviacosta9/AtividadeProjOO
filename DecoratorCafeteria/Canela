@@ -1,0 +1,15 @@
+public class Canela extends AdicionalDecorator{
+    public Canela(Bebida bebida){
+        super(bebida);
+    }
+
+    @Override
+    public String getDescricao(){
+        return bebidaEnvolvida.getDescricao() + ", Canela";
+    }
+
+    @Override
+    public double getCusto(){
+        return bebidaEnvolvida.getCusto() + 0.50;
+    }
+}

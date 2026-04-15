@@ -1,0 +1,17 @@
+public abstract class AdicionalDecorator implements Bebida{
+    protected Bebida bebidaEnvolvida;
+
+    public AdicionalDecorator(Bebida bebida){
+        this.bebidaEnvolvida = bebida;
+    }
+
+    @Override
+    public String getDescricao(){
+        return bebidaEnvolvida.getDescricao();
+    }
+
+    @Override
+    public double getCusto(){
+        return bebidaEnvolvida.getCusto();
+    }
+}

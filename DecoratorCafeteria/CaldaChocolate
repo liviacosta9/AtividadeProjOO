@@ -1,0 +1,15 @@
+public class CaldaChocolate extends AdicionalDecorator{
+    public CaldaChocolate(Bebida bebida){
+        super(bebida);
+    }
+
+    @Override
+    public String getDescricao(){
+        return bebidaEnvolvida.getDescricao() + ", Calda de Chocolate";
+    }
+
+    @Override
+    public double getCusto(){
+        return bebidaEnvolvida.getCusto() + 2.00;
+    }
+}

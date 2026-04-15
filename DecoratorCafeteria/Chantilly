@@ -1,0 +1,15 @@
+public class Chantilly extends AdicionalDecorator{
+    public Chantilly(Bebida bebida){
+        super(bebida);
+    }
+
+    @Override
+    public String getDescricao(){
+        return bebidaEnvolvida.getDescricao() + ", Chantilly";
+    }
+
+    @Override
+    public double getCusto(){
+        return bebidaEnvolvida.getCusto() + 2.50;
+    }
+}
