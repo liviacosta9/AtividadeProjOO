@@ -1,0 +1,70 @@
+public class HomeTheaterFacade{
+    private TV tv;
+    private Projetor projetor;
+    private Receiver receiver;
+    private PlayerMidia player;
+    private SistemaSom som;
+    private LuzAmbiente luz;
+
+    public HomeTheaterFacade(TV tv, Projetor projetor, Receiver receiver, PlayerMidia player, SistemaSom som, LuzAmbiente luz) {
+        this.tv = tv;
+        this.projetor = projetor;
+        this.receiver = receiver;
+        this.player = player;
+        this.som = som;
+        this.luz = luz;
+    }
+
+    public void assistirFilme(){
+        System.out.println("\nAssistir Filme...");
+        luz.diminuirLuz(); 
+        tv.ligar();
+        projetor.ligar();
+        receiver.ligar();
+        som.ligar();
+        som.ajustarVolume();
+        player.ligar();
+        player.reproduzirFilme();
+    }
+
+    public void ouvirMusica(){
+        System.out.println("\nOuvir Música");
+        luz.ligarLuz(); // [cite: 6, 14]
+        receiver.ligar();
+        som.ligar();
+        som.ajustarVolume();
+        player.ligar();
+        player.reproduzirMusica();
+    }
+
+    public void desligarSistema(){
+        System.out.println("\nDesligando sistema");
+        tv.desligar(); // [cite: 15]
+        projetor.desligar();
+        receiver.desligar();
+        som.desligar();
+        player.desligar();
+    }
+    
+    // TV
+    public void ligarTV(){ tv.ligar(); }
+    public void desligarTV(){ tv.desligar(); }
+
+    // Projetor
+    public void ligarProjetor(){ projetor.ligar(); }
+    public void desligarProjetor(){ projetor.desligar(); }
+
+    // Som
+    public void ligarSom(){ som.ligar(); }
+    public void desligarSom(){ som.desligar(); }
+    public void ajustarVolumeSom(){ som.ajustarVolume(); }
+
+    // Luz
+    public void ligarLuzAmbiente(){ luz.ligarLuz(); }
+    public void diminuirLuzAmbiente(){ luz.diminuirLuz(); }
+
+    // Player
+    public void ligarPlayer(){ player.ligar(); }
+    public void reproduzirFilme(){ player.reproduzirFilme(); }
+    public void reproduzirMusica(){ player.reproduzirMusica(); }
+}

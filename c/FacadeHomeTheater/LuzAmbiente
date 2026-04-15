@@ -1,0 +1,10 @@
+public class LuzAmbiente {
+
+    public void diminuirLuz(){
+        System.out.println("Luzes diminuídas");
+    }
+
+    public void ligarLuz(){
+        System.out.println("Luzes acesas");
+    }
+}
